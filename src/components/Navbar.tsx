@@ -4,12 +4,18 @@ import Link from "next/link";
 import NavLinks from "./NavLinks";
 import { useState } from "react";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10 0 bg-[#121212] bg-opacity-90">
+    <motion.nav
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="fixed top-0 left-0 right-0 z-10 0 bg-[#121212] bg-opacity-80 md:bg-opacity-65 backdrop-blur-sm"
+    >
       <div className="flex items-center justify-between py-2 px-4">
         <Link
           href={"/"}
@@ -44,6 +50,6 @@ export default function Navbar() {
       <div className="md:hidden flex flex-col items-center">
         {navbarIsOpen && <NavLinks />}
       </div>
-    </nav>
+    </motion.nav>
   );
 }

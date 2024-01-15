@@ -3,13 +3,19 @@
 import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <section>
-      <div className="grid grid-cols-1 md:grid-cols-12">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="grid grid-cols-1 md:grid-cols-12"
+      >
         <div className="col-span-7 place-self-center space-y-4 mb-6 md:mb-0 text-center md:text-left">
-          <h1 className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-teal-300 text-2xl md:text-4xl lg:text-5xl font-extrabold">
+          <h1 className="text-yellow-300 text-2xl md:text-4xl lg:text-5xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
               Hello, I'm <br />
             </span>
@@ -54,7 +60,7 @@ export default function Hero() {
             />
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
