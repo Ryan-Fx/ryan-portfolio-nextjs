@@ -1,4 +1,3 @@
-import React from "react";
 import ProjectCard from "./ProjectCard";
 
 const projectsData = [
@@ -60,11 +59,11 @@ const projectsData = [
 
 export default function Project() {
   return (
-    <section>
+    <section className="scroll-mt-24" id="projects">
       <h2 className="text-gray-400 text-center font-semibold text-2xl md:text-4xl lg:text-5xl mb-4">
         My Projects
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.id}

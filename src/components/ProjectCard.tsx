@@ -1,6 +1,10 @@
+"use client";
+
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
+import { useScroll, motion, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 
 export default function ProjectCard({
   imgUrl,
@@ -13,45 +17,59 @@ export default function ProjectCard({
   description: string;
   tags: string[];
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1.2"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+
   return (
-    <div className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group">
-      <div className="flex items-center justify-center relative overflow-hidden">
-        {/* image */}
-        <Image
-          src={imgUrl}
-          width={500}
-          height={500}
-          alt="project"
-          className="rounded-lg"
-        />
+    <div className="md:hover:scale-110 transition-all duration-300">
+      <motion.div
+        ref={ref}
+        style={{ scale: scaleProgress, opacity: opacityProgress }}
+        className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group shadow-lg shadow-slate-500/60 p-2"
+      >
+        <div className="flex items-center rounded-lg justify-center relative overflow-hidden">
+          {/* image */}
+          <Image
+            src={imgUrl}
+            width={500}
+            height={500}
+            alt="project"
+            className="rounded-lg group-hover:scale-125 transition duration-300"
+          />
 
-        {/* overlay */}
-        <div className="absolute inset-0 bg-[#181818] opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
+          {/* overlay */}
+          <div className="absolute inset-0 bg-[#181818] opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
 
-        {/* link */}
-        <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-14 group-hover:sm:-translate-y-12 group-hover:md:-translate-y-16 group-hover:lg:-translate-y-14 transition-all duration-300 text-white flex space-x-2">
-          <div className="rounded-full border-2 p-2 group/ryan  border-gray-400 hover:border-white hover/ryan">
-            <Link
-              href={"#"}
-              className="h-14 w-14 border-gray-400 hover/ryan:border-white rounded-full "
-            >
-              <CodeBracketIcon className="h-10 w-10 text-gray-400 group-hover/ryan:text-white " />
-            </Link>
-          </div>
-          <div className="rounded-full border-2 p-2 group/ryan  border-gray-400 hover:border-white hover/ryan">
-            <Link
-              href={"#"}
-              className="h-14 w-14  border-gray-400 hover/ryan:border-white rounded-full group/ryan"
-            >
-              <EyeIcon className="h-10 w-10 text-gray-400 group-hover/ryan:text-white " />
-            </Link>
+          {/* link */}
+          <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-14 group-hover:sm:-translate-y-12 group-hover:md:-translate-y-16 group-hover:lg:-translate-y-14 group-hover:xl:-translate-y-20 transition-all duration-300 text-white flex space-x-2">
+            <div className="rounded-full border-2 p-2 group/ryan  border-gray-400 hover:border-white hover/ryan">
+              <Link
+                href={"#"}
+                className="h-14 w-14 border-gray-400 hover/ryan:border-white rounded-full "
+              >
+                <CodeBracketIcon className="h-10 w-10 text-gray-400 group-hover/ryan:text-white " />
+              </Link>
+            </div>
+            <div className="rounded-full border-2 p-2 group/ryan  border-gray-400 hover:border-white hover/ryan">
+              <Link
+                href={"#"}
+                className="h-14 w-14  border-gray-400 hover/ryan:border-white rounded-full group/ryan"
+              >
+                <EyeIcon className="h-10 w-10 text-gray-400 group-hover/ryan:text-white " />
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="text-white rounded-b-xl bg-[#181818] mt-2">
-        <h5 className="text-xl font-semibold">{title}</h5>
-        <p className="text-gray-400">{description}</p>
-      </div>
+        <div className="text-black mt-2 w-full">
+          <h5 className="text-xl font-semibold">{title}</h5>
+          <p className="text-gray-400">{description}</p>
+        </div>
+      </motion.div>
     </div>
   );
 }

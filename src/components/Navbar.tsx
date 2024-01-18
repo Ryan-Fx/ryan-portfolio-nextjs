@@ -10,46 +10,43 @@ export default function Navbar() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
 
   return (
-    <motion.nav
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.5 }}
-      className="fixed top-0 left-0 right-0 z-10 0 bg-[#121212] bg-opacity-80 md:bg-opacity-65 backdrop-blur-sm"
-    >
-      <div className="flex items-center justify-between py-2 px-4">
-        <Link
-          href={"/"}
-          className="text-5xl font-semibold text-white hover:text-fuchsia-500 transition duration-300"
+    <nav className="relative flex justify-end md:justify-center w-full ">
+      {/*web menu */}
+      <div className="flex justify-center">
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="hidden md:flex fixed top-5 z-10 bg-opacity-60 backdrop-blur-[0.5rem] bg-white rounded-full shadow-lg shadow-black/5 py-2 px-5 space-x-2"
+          id="navbar"
         >
-          Ryan
-        </Link>
-        {/*web menu */}
-        <div className="menu hidden md:block" id="navbar">
           <NavLinks />
-        </div>
+        </motion.div>
+      </div>
 
-        {/* mobile-menu */}
-        <div className="mobile-menu md:hidden">
+      {/* mobile-menu */}
+      <div className="md:hidden flex flex-col z-20 fixed w-full bg-white bg-opacity-60 backdrop-blur-[0.5rem]">
+        <div className="mobile-menu flex justify-end">
           {!navbarIsOpen ? (
             <button
               onClick={() => setNavbarIsOpen(true)}
-              className="flex items-center p-2 border-slate-200 text-slate-200 hover:text-yellow-300 hover:border-yellow-300"
+              className="flex items-center p-4 border-slate-200 text-black hover:text-fuchsia-500 hover:border-yellow-300"
             >
               <Bars4Icon className="h-6 w-6" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarIsOpen(false)}
-              className="flex items-center p-2 border-slate-200 text-slate-200 hover:text-yellow-300 hover:border-yellow-300"
+              className="flex items-center p-4 border-slate-200 text-black hover:text-fuchsia-500 hover:border-yellow-300"
             >
               <XMarkIcon className="h-6 w-6" />
             </button>
           )}
         </div>
+        <div className="flex flex-col text-center p-4">
+          {navbarIsOpen && <NavLinks />}
+        </div>
       </div>
-      <div className="md:hidden flex flex-col items-center">
-        {navbarIsOpen && <NavLinks />}
-      </div>
-    </motion.nav>
+    </nav>
   );
 }

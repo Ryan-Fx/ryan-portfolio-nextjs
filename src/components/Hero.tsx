@@ -26,7 +26,7 @@ export default function Hero() {
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Web Developer",
                 1000,
-                "Next JS Developer",
+                "focusing on Next JS",
                 1000,
               ]}
               wrapper="span"
@@ -41,17 +41,22 @@ export default function Hero() {
             excepturi labore. Debitis earum at maiores. Officia debitis commodi
             ducimus est libero.
           </p>
-          <div className="space-y-3">
-            <button className="py-3 px-6 w-full sm:w-fit sm:mr-2 rounded-full font-semibold bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500  hover:from-blue-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-500">
-              Hire Me
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
+            className="space-y-3"
+          >
+            <button className="py-3 px-6 w-full sm:w-fit sm:mr-3 rounded-full font-semibold  hover:scale-110 transition text-black bg-white shadow-lg shadow-black/5">
+              Contact Me
             </button>
-            <button className="py-3 px-6 w-full sm:w-fit rounded-full font-semibold bg-transparent text-white border hover:bg-slate-900">
+            <button className="py-3 px-6 w-full sm:w-fit rounded-full font-semibold text-white border bg-slate-800 hover:bg-slate-950 hover:scale-110 transition">
               Download CV
             </button>
-          </div>
+          </motion.div>
         </div>
-        <div className="col-span-5 place-self-center">
-          <div className="rounded-full bg-fuchsia-900 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
+        <div className="col-span-5 place-self-center group">
+          <div className="rounded-full group-hover:scale-110 group-hover:-rotate-12 transition duration-300 bg-gradient-to-r from-fuchsia-400 to-pink-300 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
             <Image
               src={"/images/hero.png"}
               width={500}
