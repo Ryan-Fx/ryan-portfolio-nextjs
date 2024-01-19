@@ -46,7 +46,7 @@ export default function ProjectCard({
           <div className="absolute inset-0 bg-[#181818] opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
 
           {/* link */}
-          <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-14 group-hover:sm:-translate-y-12 group-hover:md:-translate-y-16 group-hover:lg:-translate-y-14 group-hover:xl:-translate-y-20 transition-all duration-300 text-white flex space-x-2">
+          <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-[80px] group-hover:sm:-translate-y-[105px] group-hover:md:-translate-y-16 group-hover:lg:-translate-y-[90px] group-hover:xl:-translate-y-20 transition-all duration-300 text-white flex space-x-2">
             <div className="rounded-full border-2 p-2 group/ryan  border-gray-400 hover:border-white hover/ryan">
               <Link
                 href={"#"}

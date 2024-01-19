@@ -56,7 +56,7 @@ export default function Hero() {
           </motion.div>
         </div>
         <div className="col-span-5 place-self-center group">
-          <div className="rounded-full group-hover:scale-110 group-hover:-rotate-12 transition duration-300 bg-gradient-to-r from-fuchsia-400 to-pink-300 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
+          <div className="rounded-full group-hover:scale-110 group-hover:-rotate-12 transition duration-700 bg-gradient-to-r from-fuchsia-400 to-pink-300 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
             <Image
               src={"/images/hero.png"}
               width={500}

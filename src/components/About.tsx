@@ -62,7 +62,7 @@ export default function About() {
 
   return (
     <div
-      className="text-white mb-6 md:mb-12 md:scroll-mt-16 mt-[160px]"
+      className="text-white mb-6 md:mb-12 md:scroll-mt-16 lg:mt-[160px]"
       id="about"
     >
       <motion.section

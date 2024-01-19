@@ -5,6 +5,7 @@ import NavLinks from "./NavLinks";
 import { useState } from "react";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
+import clsx from "clsx";
 
 export default function Navbar() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
@@ -25,26 +26,33 @@ export default function Navbar() {
       </div>
 
       {/* mobile-menu */}
-      <div className="md:hidden flex flex-col z-20 fixed w-full bg-white bg-opacity-60 backdrop-blur-[0.5rem]">
-        <div className="mobile-menu flex justify-end">
+      <div className="md:hidden flex flex-col z-20 fixed w-full ">
+        <div className="mobile-menu flex justify-end bg-white bg-opacity-60 backdrop-blur-[0.5rem]">
           {!navbarIsOpen ? (
             <button
               onClick={() => setNavbarIsOpen(true)}
-              className="flex items-center p-4 border-slate-200 text-black hover:text-fuchsia-500 hover:border-yellow-300"
+              className="flex items-center p-4 border-slate-200 text-fuchsia-500"
             >
-              <Bars4Icon className="h-6 w-6" />
+              <Bars4Icon className="h-8 w-8" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarIsOpen(false)}
-              className="flex items-center p-4 border-slate-200 text-black hover:text-fuchsia-500 hover:border-yellow-300"
+              className="flex items-center p-4 border-slate-200 text-fuchsia-500"
             >
-              <XMarkIcon className="h-6 w-6" />
+              <XMarkIcon className="h-8 w-8" />
             </button>
           )}
         </div>
-        <div className="flex flex-col text-center p-4">
-          {navbarIsOpen && <NavLinks />}
+        <div
+          className={clsx(
+            "flex flex-col text-center -translate-x-full transition duration-300 bg-white bg-opacity-60 backdrop-blur-[0.5rem]",
+            {
+              "translate-x-0": navbarIsOpen,
+            }
+          )}
+        >
+          <NavLinks />
         </div>
       </div>
     </nav>
