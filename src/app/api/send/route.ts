@@ -22,7 +22,7 @@ export async function POST(req: Request) {
     const { name, email, message } = SendSchema.parse(body);
 
     const { data, error } = await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "Ryan <onboarding@resend.dev>",
       to: "rinnd.dn@gmail.com",
       subject: "Message from contact form (Ryan Portfolio)",
       text: message,
