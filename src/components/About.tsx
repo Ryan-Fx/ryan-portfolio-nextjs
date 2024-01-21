@@ -61,11 +61,11 @@ export default function About() {
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
   return (
-    <div
+    <section
       className="text-white mb-6 md:mb-12 md:scroll-mt-16 lg:mt-[160px]"
       id="about"
     >
-      <motion.section
+      <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
@@ -150,7 +150,7 @@ export default function About() {
             </div>
           </div>
         </div>
-      </motion.section>
-    </div>
+      </motion.div>
+    </section>
   );
 }

@@ -32,7 +32,7 @@ export default function NavLinks() {
             <motion.span
               layoutId="active"
               transition={{ type: "spring", stiffness: 380, damping: 30 }}
-              className="bg-gray-200 absolute inset-0 rounded-full -z-10"
+              className="md:bg-gray-200 absolute inset-0 rounded-full -z-10"
             ></motion.span>
           )}
         </Link>
