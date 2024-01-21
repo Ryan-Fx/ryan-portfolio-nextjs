@@ -88,7 +88,7 @@ export default function Contact() {
               id="name"
               {...register("name")}
               placeholder="example@mail.com"
-              className="w-full"
+              className="w-full capitalize"
             />
           </div>
           <div>
