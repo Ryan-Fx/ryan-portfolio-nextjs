@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <main className="container mx-auto px-8 py-6 mt-16">
+      <main className="container mx-auto px-8 lg:px-[150px] py-6 mt-16">
         <Hero />
         <About />
         <Project />

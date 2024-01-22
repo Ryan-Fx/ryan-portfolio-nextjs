@@ -1,20 +1,43 @@
-import * as React from "react";
+import {
+  Html,
+  Body,
+  Heading,
+  Head,
+  Hr,
+  Container,
+  Preview,
+  Section,
+  Text,
+  Tailwind,
+} from "@react-email/components";
 
 interface EmailTemplateProps {
-  firstName: string;
-  text: string;
+  message: string;
+  email: string;
 }
 
 export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
-  firstName,
-  text,
+  message,
+  email,
 }) => (
-  <div>
-    <h1 className="text-3xl font-bold capitalize text-pink-500">
-      From {firstName}
-    </h1>
-    <p className="text-lg text-fuchsia-500">{text}</p>
-  </div>
+  <Html>
+    <Head />
+    <Preview>New message from your portfolio site</Preview>
+    <Tailwind>
+      <Body className="bg-gray-100">
+        <Container>
+          <Section className="my-6 py-4 px-10 rounded-md bg-white">
+            <Heading className="leading-tight text-sky-500 text-2xl">
+              You received the following message from the contact form
+            </Heading>
+            <Text className="text-lg">{message}</Text>
+            <Hr />
+            <Text className="font-semibold">Sender : {email}</Text>
+          </Section>
+        </Container>
+      </Body>
+    </Tailwind>
+  </Html>
 );
 
 export default EmailTemplate;
