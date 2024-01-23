@@ -1,17 +1,17 @@
 "use client";
 
-import Link from "next/link";
 import NavLinks from "./NavLinks";
 import { useState } from "react";
 import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import { ThemeSwitch } from "./theme-switch";
 
 export default function Navbar() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
 
   return (
-    <nav className="relative flex justify-end md:justify-center w-full ">
+    <nav className="relative flex justify-end md:justify-center w-full">
       {/*web menu */}
       <div className="flex justify-center">
         <motion.div
@@ -23,6 +23,10 @@ export default function Navbar() {
         >
           <NavLinks />
         </motion.div>
+      </div>
+      {/* dark mode */}
+      <div className="hidden md:flex fixed top-5 right-5">
+        <ThemeSwitch />
       </div>
 
       {/* mobile-menu */}
@@ -43,6 +47,9 @@ export default function Navbar() {
               <XMarkIcon className="h-8 w-8" />
             </button>
           )}
+        </div>
+        <div className="flex justify-end pr-4 md:hidden">
+          <ThemeSwitch />
         </div>
         <div
           className={clsx(
