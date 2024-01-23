@@ -15,7 +15,7 @@ export default function Hero() {
         className="grid grid-cols-1 md:grid-cols-12"
       >
         <div className="col-span-7 place-self-center space-y-4 mb-6 md:mb-0 text-center md:text-left">
-          <h1 className="text-yellow-300 text-2xl md:text-4xl lg:text-5xl font-extrabold">
+          <h1 className="text-rose-500 text-2xl md:text-4xl lg:text-5xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
               Hello, I'm <br />
             </span>
@@ -35,7 +35,7 @@ export default function Hero() {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-gray-400 text-lg lg:text-xl">
+          <p className="text-gray-400 text-lg lg:text-xl tracking-wide">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             sequi mollitia facilis officia amet aspernatur ab voluptas delectus
             excepturi labore. Debitis earum at maiores. Officia debitis commodi
