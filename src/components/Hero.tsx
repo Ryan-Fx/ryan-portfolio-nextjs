@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { HoverCardDemo } from "./card-hover";
 
 export default function Hero() {
   return (
@@ -36,6 +37,7 @@ export default function Hero() {
             />
           </h1>
           <p className="text-gray-400 text-lg lg:text-xl tracking-wide">
+            Please check my <HoverCardDemo />
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             sequi mollitia facilis officia amet aspernatur ab voluptas delectus
             excepturi labore. Debitis earum at maiores. Officia debitis commodi

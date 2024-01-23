@@ -32,6 +32,9 @@ export default function Navbar() {
       {/* mobile-menu */}
       <div className="md:hidden flex flex-col z-20 fixed w-full ">
         <div className="mobile-menu flex justify-end bg-white bg-opacity-60 backdrop-blur-[0.5rem]">
+          <div className="flex justify-end fixed left-5 top-4 pr-4 md:hidden">
+            <ThemeSwitch />
+          </div>
           {!navbarIsOpen ? (
             <button
               onClick={() => setNavbarIsOpen(true)}
@@ -48,9 +51,7 @@ export default function Navbar() {
             </button>
           )}
         </div>
-        <div className="flex justify-end pr-4 md:hidden">
-          <ThemeSwitch />
-        </div>
+
         <div
           className={clsx(
             "flex flex-col text-center -translate-x-full transition duration-300 bg-white bg-opacity-60 backdrop-blur-[0.5rem]",
