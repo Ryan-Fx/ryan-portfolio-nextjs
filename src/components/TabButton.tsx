@@ -6,7 +6,9 @@ const variants = {
 };
 
 export default function TabButton({ active, selectTab, children }: any) {
-  const buttonClasses = active ? "text-black" : "text-gray-400 ";
+  const buttonClasses = active
+    ? "text-black dark:text-white"
+    : "text-gray-400 dark:text-gray-400";
 
   return (
     <button onClick={selectTab}>

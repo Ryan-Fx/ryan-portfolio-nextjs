@@ -18,7 +18,7 @@ export default function Navbar() {
           initial={{ y: -100, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
-          className="hidden md:flex fixed top-5 z-10 bg-opacity-60 backdrop-blur-[0.5rem] bg-white rounded-full shadow-lg shadow-black/5 py-2 px-5 space-x-2"
+          className="hidden md:flex fixed top-5 z-10 bg-opacity-60 backdrop-blur-[0.5rem] bg-white dark:bg-gray-800 rounded-full shadow-lg shadow-black/5 py-2 px-5 space-x-2"
           id="navbar"
         >
           <NavLinks />

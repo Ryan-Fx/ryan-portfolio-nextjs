@@ -20,7 +20,7 @@ export default function ProjectCard({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1.2"],
+    offset: ["0 1", "1.33 0.8"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
@@ -30,7 +30,7 @@ export default function ProjectCard({
       <motion.div
         ref={ref}
         style={{ scale: scaleProgress, opacity: opacityProgress }}
-        className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group shadow-lg shadow-slate-500/60 p-2"
+        className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group shadow-lg shadow-slate-500/60 dark:shadow-slate-500/30 p-2 dark:bg-gray-400"
       >
         <div className="flex items-center rounded-lg justify-center relative overflow-hidden">
           {/* image */}
@@ -67,7 +67,7 @@ export default function ProjectCard({
         </div>
         <div className="text-black mt-2 w-full">
           <h5 className="text-xl font-semibold">{title}</h5>
-          <p className="text-gray-400">{description}</p>
+          <p className="text-gray-400 dark:text-slate-800">{description}</p>
         </div>
       </motion.div>
     </div>

@@ -16,7 +16,7 @@ export default function Hero() {
         className="grid grid-cols-1 md:grid-cols-12"
       >
         <div className="col-span-7 place-self-center space-y-4 mb-6 md:mb-0 text-center md:text-left">
-          <h1 className="text-rose-500 text-2xl md:text-4xl lg:text-5xl font-extrabold">
+          <h1 className="text-fuchsia-500 text-2xl md:text-4xl lg:text-5xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
               Hello, I'm <br />
             </span>
@@ -36,7 +36,7 @@ export default function Hero() {
               repeat={Infinity}
             />
           </h1>
-          <p className="text-gray-400 text-lg lg:text-xl tracking-wide">
+          <p className="text-gray-400 dark:text-slate-200 text-lg lg:text-xl tracking-wide">
             Please check my <HoverCardDemo />
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
             sequi mollitia facilis officia amet aspernatur ab voluptas delectus
@@ -58,7 +58,7 @@ export default function Hero() {
           </motion.div>
         </div>
         <div className="col-span-5 place-self-center group">
-          <div className="rounded-full group-hover:scale-110 group-hover:-rotate-12 transition duration-700 bg-gradient-to-r from-fuchsia-400 to-pink-300 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
+          <div className="rounded-full group-hover:scale-110 group-hover:-rotate-12 transition duration-700 bg-gradient-to-r from-fuchsia-400 to-pink-300 dark:bg-gradient-to-r dark:from-fuchsia-900 dark:to-pink-900 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
             <Image
               src={"/images/hero.png"}
               width={500}

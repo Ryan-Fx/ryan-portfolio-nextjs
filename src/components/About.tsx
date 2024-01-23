@@ -10,7 +10,7 @@ const TAB_DATA = [
     title: "Skills",
     id: "skills",
     content: (
-      <ul className="list-disc pl-4 text-black">
+      <ul className="list-disc pl-4 text-black dark:text-gray-200">
         <li>Tailwind CSS</li>
         <li>Next JS</li>
         <li>Prisma</li>
@@ -24,7 +24,7 @@ const TAB_DATA = [
     title: "Education",
     id: "educations",
     content: (
-      <ul className="list-disc pl-4 text-black">
+      <ul className="list-disc pl-4 text-black dark:text-gray-200">
         <li>DIPA University, Makassar</li>
       </ul>
     ),
@@ -33,7 +33,7 @@ const TAB_DATA = [
     title: "Certifications",
     id: "certifications",
     content: (
-      <ul className="list-disc pl-4 text-black">
+      <ul className="list-disc pl-4 text-black dark:text-gray-200">
         <li>Lorem, ipsum.</li>
         <li>Lorem ipsum dolor sit.</li>
         <li>Lorem, ipsum dolor.</li>
@@ -55,14 +55,14 @@ export default function About() {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["0 1", "1.33 1.6"],
+    offset: ["0 1", "1.33 1.4"],
   });
   const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
 
   return (
     <section
-      className="text-white mb-6 md:mb-12 md:scroll-mt-16 lg:mt-[160px]"
+      className="text-white mb-6 md:mb-12 md:scroll-mt-16 lg:mt-[150px]"
       id="about"
     >
       <motion.div
@@ -83,10 +83,10 @@ export default function About() {
             />
           </div>
           <div className="p-2">
-            <h2 className="text-3xl text-gray-600 font-bold mb-2 md:text-5xl lg:text-6xl">
+            <h2 className="text-3xl text-gray-600 dark:text-white font-bold mb-2 md:text-5xl lg:text-6xl">
               About
             </h2>
-            <p className="text-justify text-gray-600">
+            <p className="text-justify text-gray-600 dark:text-slate-200">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
               quo perspiciatis cum perferendis consectetur incidunt animi est
               esse atque quos recusandae velit officiis sed amet autem rerum,

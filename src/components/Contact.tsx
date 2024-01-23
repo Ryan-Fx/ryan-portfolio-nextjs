@@ -10,6 +10,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import toast from "react-hot-toast";
 import { ColorRing, Oval } from "react-loader-spinner";
+import {
+  FaFacebookF,
+  FaLinkedin,
+  FaTwitter,
+  FaInstagram,
+  FaGithub,
+} from "react-icons/fa";
 
 const FormSchema = z.object({
   email: z.string().min(1, "Email is required").email("Invalid email"),
@@ -53,26 +60,26 @@ export default function Contact() {
       id="contact"
     >
       <div className="space-y-4">
-        <h5 className="capitalize text-5xl font-bold">Let's get in touch</h5>
-        <p className="text-lg">
+        <h5 className="capitalize text-5xl font-bold dark:text-white">
+          Let's get in touch
+        </h5>
+        <p className="text-lg dark:text-slate-200">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam
           reiciendis consectetur pariatur fuga voluptate, provident omnis rem
           numquam a laudantium.
         </p>
-        <div className="flex gap-2">
-          <Link href={"github.com"}>
-            <Image
-              src={GithubIcon}
-              alt="Github Icon"
-              className="bg-black rounded-full"
+        <div className="flex space-x-5 justify-end md:justify-start">
+          <Link href="">
+            <FaLinkedin className="h-12 w-12 hover:scale-110 transition-all hover:text-purple-500" />
+          </Link>
+          <Link href="https://github.com/Ryan-Fx" target="_blank">
+            <FaGithub
+              target="_blank"
+              className="h-12 w-12 hover:scale-110 transition-all hover:text-purple-500"
             />
           </Link>
-          <Link href={"linkedin.com"}>
-            <Image
-              src={LinkedIn}
-              alt="LinkedIn Icon"
-              className="bg-black rounded-full"
-            />
+          <Link href={"https://instagram.com/fx.ryan"} target="_blank">
+            <FaInstagram className="h-12 w-12 hover:scale-110 transition-all hover:text-purple-500" />
           </Link>
         </div>
       </div>
@@ -105,7 +112,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="py-2 px-4 bg-black rounded-md text-white focus:outline-none hover:bg-slate-800"
+            className="py-2 px-4 bg-black dark:bg-white rounded-md text-white dark:text-black hover:bg-slate-800 dark:hover:bg-slate-200"
           >
             {isSubmitting ? (
               <ColorRing
