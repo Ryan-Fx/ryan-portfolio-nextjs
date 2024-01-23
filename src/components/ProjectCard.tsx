@@ -30,7 +30,7 @@ export default function ProjectCard({
       <motion.div
         ref={ref}
         style={{ scale: scaleProgress, opacity: opacityProgress }}
-        className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group shadow-lg shadow-slate-500/60 dark:shadow-slate-500/30 p-2 dark:bg-gray-400"
+        className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group shadow-lg shadow-slate-500/60 dark:shadow-slate-500/30 p-2 dark:bg-gray-700"
       >
         <div className="flex items-center rounded-lg justify-center relative overflow-hidden">
           {/* image */}
@@ -66,8 +66,8 @@ export default function ProjectCard({
           </div>
         </div>
         <div className="text-black mt-2 w-full">
-          <h5 className="text-xl font-semibold">{title}</h5>
-          <p className="text-gray-400 dark:text-slate-800">{description}</p>
+          <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
+          <p className="text-gray-400 dark:text-slate-300">{description}</p>
         </div>
       </motion.div>
     </div>

@@ -21,7 +21,7 @@ export default function NavLinks() {
           href={link.path}
           onClick={() => setActive(link.name)}
           className={clsx(
-            "text-gray-500 dark:text-gray-400 hover:text-fuchsia-500 md:hover:text-black dark:md:hover:text-white py-2 px-4 rounded-full font-semibold transition duration-150 relative",
+            "text-gray-500 hover:text-fuchsia-500 md:hover:text-black dark:hover:md:text-white py-2 px-4 rounded-full font-semibold transition duration-150 relative",
             {
               "md:text-black dark:md:text-white text-fuchsia-500":
                 active === link.name,
@@ -33,7 +33,7 @@ export default function NavLinks() {
             <motion.span
               layoutId="active"
               transition={{ type: "spring", stiffness: 380, damping: 30 }}
-              className="md:bg-gray-200 dark:md:bg-gray-600 absolute inset-0 rounded-full -z-10"
+              className="md:bg-gray-200 dark:md:bg-gray-700 absolute inset-0 rounded-full -z-10"
             ></motion.span>
           )}
         </Link>

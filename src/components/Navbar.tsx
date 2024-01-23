@@ -38,14 +38,14 @@ export default function Navbar() {
           {!navbarIsOpen ? (
             <button
               onClick={() => setNavbarIsOpen(true)}
-              className="flex items-center p-4 border-slate-200 text-fuchsia-500"
+              className="flex items-center p-4 border-slate-200 text-fuchsia-500 dark:text-black"
             >
               <Bars4Icon className="h-8 w-8" />
             </button>
           ) : (
             <button
               onClick={() => setNavbarIsOpen(false)}
-              className="flex items-center p-4 border-slate-200 text-fuchsia-500"
+              className="flex items-center p-4 border-slate-200 text-fuchsia-500 dark:text-black"
             >
               <XMarkIcon className="h-8 w-8" />
             </button>
