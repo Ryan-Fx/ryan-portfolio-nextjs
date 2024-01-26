@@ -94,7 +94,7 @@ export default function About() {
               possimus. Error qui eveniet illum assumenda vero dolores eius ad
               omnis, dicta, asperiores maiores.
             </p>
-            <div className="hidden lg:flex flex-col mt-5">
+            {/* <div className="hidden lg:flex flex-col mt-5">
               <div className="md:flex justify-between text-2xl w-[300px] ">
                 <TabButton
                   selectTab={() => handleTabChange("skills")}
@@ -120,10 +120,10 @@ export default function About() {
                   {TAB_DATA.find((t) => t.id === tab)?.content}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
-        <div className="flex flex-col px-2 md:px-0 lg:hidden">
+        {/* <div className="flex flex-col px-2 md:px-0 lg:hidden">
           <div className="md:flex justify-between w-[300px] md:px-3 md:text-xl text-lg">
             <TabButton
               selectTab={() => handleTabChange("skills")}
@@ -149,7 +149,7 @@ export default function About() {
               {TAB_DATA.find((t) => t.id === tab)?.content}
             </div>
           </div>
-        </div>
+        </div> */}
       </motion.div>
     </section>
   );
