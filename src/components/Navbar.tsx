@@ -25,7 +25,7 @@ export default function Navbar() {
         </motion.div>
       </div>
       {/* dark mode */}
-      <div className="hidden md:flex fixed top-5 right-5">
+      <div className="hidden md:flex fixed top-5 right-5 z-20">
         <ThemeSwitch />
       </div>
 
