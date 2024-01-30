@@ -17,7 +17,11 @@ export default function Footer() {
       </div>
       <p className="mb-4 px-4 text-center text-gray-500 dark:text-white">
         <small className="mb-2 block text-xs md:text-base">
-          &copy; 2030 Ryan Fx 😎 All rights reserved.
+          &copy; 2024 Ryan Fx 😎 All{" "}
+          <Link href={"/minee"} className="cursor-text">
+            rights
+          </Link>{" "}
+          reserved.
         </small>
       </p>
     </footer>

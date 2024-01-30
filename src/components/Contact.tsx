@@ -37,8 +37,8 @@ export default function Contact() {
     },
   });
 
-  const sendEmail = async (data: z.infer<typeof FormSchema>) => {
-    const res = await fetch("/api/send", {
+  const sendMessage = async (data: z.infer<typeof FormSchema>) => {
+    const res = await fetch("/api/minee", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -46,10 +46,10 @@ export default function Contact() {
       body: JSON.stringify(data),
     });
     if (res.ok) {
-      reset();
       toast.success("Your message was sent successfully!");
       return res.json();
     }
+    reset();
 
     toast.error("Something went wrong, please try again");
   };
@@ -86,7 +86,7 @@ export default function Contact() {
       <div className="border-2 border-gray-300 p-6 rounded">
         <form
           action=""
-          onSubmit={handleSubmit(sendEmail)}
+          onSubmit={handleSubmit(sendMessage)}
           className="space-y-4"
         >
           <div>

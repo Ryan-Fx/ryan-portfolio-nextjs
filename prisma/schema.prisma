@@ -54,3 +54,10 @@ model VerificationToken {
 
   @@unique([identifier, token])
 }
+
+model Minee {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  message   String
+  createdAt DateTime @default(now())
+}
