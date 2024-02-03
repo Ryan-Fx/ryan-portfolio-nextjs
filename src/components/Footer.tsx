@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer>
-      <div className="flex items-center justify-center py-5 md:py-8 space-x-3">
+      <div className="flex items-center justify-center py-5 md:py-8 space-x-2">
         <Link href="https://github.com/" target="_blank">
           <FaGithub className="h-8 w-8 hover:scale-110 transition-all hover:text-purple-500" />
         </Link>

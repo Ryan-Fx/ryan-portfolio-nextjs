@@ -39,14 +39,14 @@ export default function ProjectCard({
             width={500}
             height={500}
             alt="project"
-            className="rounded-lg group-hover:scale-125 transition duration-300"
+            className="rounded-lg md:group-hover:scale-125 transition duration-300"
           />
 
           {/* overlay */}
-          <div className="absolute inset-0 bg-[#181818] opacity-0 group-hover:opacity-80 transition-all duration-300"></div>
+          <div className="absolute inset-0 bg-[#181818] opacity-0 md:group-hover:opacity-80 transition-all duration-300"></div>
 
           {/* link */}
-          <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-[80px] group-hover:sm:-translate-y-[105px] group-hover:md:-translate-y-16 group-hover:lg:-translate-y-[90px] group-hover:xl:-translate-y-20 transition-all duration-300 text-white flex space-x-2">
+          <div className="absolute bottom-0 translate-y-full group-hover:md:-translate-y-16 group-hover:lg:-translate-y-[90px] group-hover:xl:-translate-y-20 transition-all duration-300 text-white flex space-x-2">
             <div className="rounded-full border-2 p-2 group/ryan  border-gray-400 hover:border-white hover/ryan">
               <Link
                 href={"#"}
@@ -65,9 +65,27 @@ export default function ProjectCard({
             </div>
           </div>
         </div>
-        <div className="text-black mt-2 w-full">
-          <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
-          <p className="text-gray-400 dark:text-slate-300">{description}</p>
+        <div className="text-black mt-2 w-full flex justify-between md:flex-none">
+          <div>
+            <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
+            <p className="text-gray-400 dark:text-slate-300">{description}</p>
+          </div>
+          <div className="md:hidden flex gap-4 p-2">
+            <Link
+              href={"#"}
+              className="flex justify-center items-center relative"
+            >
+              <span className="h-10 w-10 absolute rounded-full border border-slate-300 -z-10 bg-slate-800"></span>
+              <CodeBracketIcon className="h-7 w-7 text-gray-300 hover:text-white" />
+            </Link>
+            <Link
+              href={"#"}
+              className="flex justify-center items-center relative"
+            >
+              <span className="h-10 w-10 absolute rounded-full border border-slate-300  -z-10 bg-slate-800"></span>
+              <EyeIcon className="h-7 w-7 text-gray-300 hover:text-white" />
+            </Link>
+          </div>
         </div>
       </motion.div>
     </div>

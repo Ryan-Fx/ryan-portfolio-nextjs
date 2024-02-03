@@ -7,6 +7,7 @@ const mineSchema = z.object({
   message: z.string().min(1, "Message is required"),
 });
 
+// CREATE MESSAGE (POST)
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -24,3 +25,13 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: "wrong" }, { status: 500 });
   }
 }
+
+// READ MESSAGE (GET)
+export const GET = async () => {
+  try {
+    const msgs = await prisma.minee.findMany();
+    return NextResponse.json({ msgs }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ message: "wrong" }, { status: 500 });
+  }
+};

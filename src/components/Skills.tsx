@@ -15,11 +15,6 @@ const skillsData = [
     tag: ["All", "Front End"],
   },
   {
-    id: 3,
-    name: "React",
-    tag: ["All", "Front End"],
-  },
-  {
     id: 4,
     name: "Next JS",
     tag: ["All", "Front End"],

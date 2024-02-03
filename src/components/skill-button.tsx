@@ -17,7 +17,7 @@ const SkillButton = ({ name, onClick, isSelected }: Props) => {
 
   return (
     <button
-      className={`${buttonStyles} text-xl font-semibold lg:text-3xl cursor-pointer hover:text-gray-600 transition duration-300`}
+      className={`${buttonStyles} text-base md:text-lg font-semibold lg:text-2xl xl:text-3xl cursor-pointer hover:text-gray-600 transition duration-300`}
       onClick={() => onClick(name)}
     >
       {name}

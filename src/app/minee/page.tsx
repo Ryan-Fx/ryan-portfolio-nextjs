@@ -1,30 +1,43 @@
-"use client";
-
-import { signOut, useSession } from "next-auth/react";
+import Message from "@/components/message-table";
+import LogoutButton from "@/components/logout-button";
+import { authOptions } from "@/lib/auth";
+import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-export default function MineePage() {
-  const { status } = useSession();
-  if (status === "unauthenticated") {
-    redirect("/login");
+async function getData() {
+  const res = await fetch("http://localhost:3000/api/minee");
+  if (!res.ok) {
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
+export default async function MineePage() {
+  // const { status } = useSession();
+  // if (status === "unauthenticated") {
+  //   redirect("/login");
+  // }
+
+  const msgs = await getData();
+  console.log(msgs);
+
+  const session = await getServerSession(authOptions);
+  if (!session) {
+    redirect("/");
   }
 
   return (
-    <div>
+    <div className="p-4 space-y-4">
       <p>Minee Page</p>
       <div>
-        <button
-          className="bg-yellow-500"
-          onClick={() =>
-            signOut({ callbackUrl: "http://localhost:3000/login" })
-          }
-        >
-          Sign out
-        </button>
+        <Link href={"/"}>Home</Link>
       </div>
       <div>
-        <Link href={"/"}>Home</Link>
+        <Message msgs={msgs} />
+      </div>
+      <div>
+        <LogoutButton />
       </div>
     </div>
   );

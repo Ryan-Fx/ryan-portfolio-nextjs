@@ -47,9 +47,9 @@ export default function Contact() {
     });
     if (res.ok) {
       toast.success("Your message was sent successfully!");
+      reset();
       return res.json();
     }
-    reset();
 
     toast.error("Something went wrong, please try again");
   };
@@ -68,46 +68,52 @@ export default function Contact() {
           reiciendis consectetur pariatur fuga voluptate, provident omnis rem
           numquam a laudantium.
         </p>
-        <div className="flex space-x-5 justify-end md:justify-start">
+        <div className="flex space-x-2 md:space-x-5 justify-end md:justify-start">
           <Link href="">
-            <FaLinkedin className="h-12 w-12 hover:scale-110 transition-all hover:text-purple-500" />
+            <FaLinkedin className="md:h-12 md:w-12 h-8 w-8 hover:scale-110 transition-all hover:text-purple-500" />
           </Link>
           <Link href="https://github.com/Ryan-Fx" target="_blank">
             <FaGithub
               target="_blank"
-              className="h-12 w-12 hover:scale-110 transition-all hover:text-purple-500"
+              className="md:h-12 md:w-12 h-8 w-8 hover:scale-110 transition-all hover:text-purple-500"
             />
           </Link>
           <Link href={"https://instagram.com/fx.ryan"} target="_blank">
-            <FaInstagram className="h-12 w-12 hover:scale-110 transition-all hover:text-purple-500" />
+            <FaInstagram className="md:h-12 md:w-12 h-8 w-8 hover:scale-110 transition-all hover:text-purple-500" />
           </Link>
         </div>
       </div>
-      <div className="border-2 border-gray-300 p-6 rounded">
+      <div className="border border-gray-300 p-6 rounded text-xs sm:text-base">
         <form
           action=""
           onSubmit={handleSubmit(sendMessage)}
           className="space-y-4"
         >
           <div>
-            <label htmlFor="email">Your email</label>
+            <label htmlFor="email" className="font-semibold">
+              Your email
+            </label>
             <input
               type="email"
               id="email"
               {...register("email")}
               placeholder="example@mail.com"
-              className="w-full p-2 border-2 border-gray-300 rounded"
+              className="w-full p-2 border border-gray-300 rounded"
             />
+            <p className="text-red-500 text-xs">{errors.email?.message}</p>
           </div>
 
           <div>
-            <label htmlFor="message">Message</label>
+            <label htmlFor="message" className="font-semibold">
+              Message
+            </label>
             <textarea
               id="message"
               {...register("message")}
-              placeholder="Let's talk about..."
-              className="w-full p-2 border-2 border-gray-300 rounded"
+              placeholder="Let's talk about... or just say hi"
+              className="w-full p-2 border border-gray-300 rounded"
             />
+            <p className="text-red-500 text-xs">{errors.message?.message}</p>
           </div>
           <button
             type="submit"
