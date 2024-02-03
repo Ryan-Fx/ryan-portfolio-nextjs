@@ -17,6 +17,7 @@ import {
   FaInstagram,
   FaGithub,
 } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const FormSchema = z.object({
   email: z.string().min(1, "Email is required").email("Invalid email"),
@@ -38,6 +39,8 @@ export default function Contact() {
   });
 
   const sendMessage = async (data: z.infer<typeof FormSchema>) => {
+    const router = useRouter();
+
     const res = await fetch("/api/minee", {
       method: "POST",
       headers: {
@@ -48,6 +51,7 @@ export default function Contact() {
     if (res.ok) {
       toast.success("Your message was sent successfully!");
       reset();
+      router.refresh();
       return res.json();
     }
 
