@@ -5,13 +5,13 @@ import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 
-async function getData() {
-  const res = await fetch("http://localhost:3000/api/minee");
-  if (!res.ok) {
-    throw new Error("Failed to fetch data");
-  }
-  return res.json();
-}
+// async function getData() {
+//   const res = await fetch("http://localhost:3000/api/minee");
+//   if (!res.ok) {
+//     throw new Error("Failed to fetch data");
+//   }
+//   return res.json();
+// }
 
 export default async function MineePage() {
   // const { status } = useSession();
@@ -19,8 +19,8 @@ export default async function MineePage() {
   //   redirect("/login");
   // }
 
-  const msgs = await getData();
-  console.log(msgs);
+  // const msgs = await getData();
+  // console.log(msgs);
 
   const session = await getServerSession(authOptions);
   if (!session) {
@@ -33,9 +33,9 @@ export default async function MineePage() {
       <div>
         <Link href={"/"}>Home</Link>
       </div>
-      <div>
+      {/* <div>
         <Message msgs={msgs} />
-      </div>
+      </div> */}
       <div>
         <LogoutButton />
       </div>
