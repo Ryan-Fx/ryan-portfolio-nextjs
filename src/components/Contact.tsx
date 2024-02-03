@@ -1,15 +1,12 @@
 "use client";
 
 import React from "react";
-import GithubIcon from "../../public/github-icon.svg";
-import LinkedIn from "../../public/linkedin-icon.svg";
 import Link from "next/link";
-import Image from "next/image";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import toast from "react-hot-toast";
-import { ColorRing, Oval } from "react-loader-spinner";
+import { ColorRing } from "react-loader-spinner";
 import {
   FaFacebookF,
   FaLinkedin,
@@ -25,6 +22,8 @@ const FormSchema = z.object({
 });
 
 export default function Contact() {
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -39,8 +38,6 @@ export default function Contact() {
   });
 
   const sendMessage = async (data: z.infer<typeof FormSchema>) => {
-    const router = useRouter();
-
     const res = await fetch("/api/minee", {
       method: "POST",
       headers: {
