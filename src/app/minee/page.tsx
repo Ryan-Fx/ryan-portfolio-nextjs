@@ -6,7 +6,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 
 async function getData() {
-  const res = await fetch("http://localhost:3000/api/minee");
+  const res = await fetch("https://ryan-portfolio-iota.vercel.app//api/minee");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
