@@ -4,9 +4,10 @@ import { authOptions } from "@/lib/auth";
 import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import { prisma } from "@/lib/prisma";
 
 async function getData() {
-  const res = await fetch("https://ryan-portfolio-iota.vercel.app/api/minee");
+  const res = await fetch("http://localhost:3000/api/minee");
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
