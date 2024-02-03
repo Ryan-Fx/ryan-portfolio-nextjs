@@ -4,7 +4,7 @@ interface MsgsProps {
   id: string;
   email: string;
   message: string;
-  createdAt: string;
+  createdAt: Date;
 }
 
 export default function Message({ msgs }: { msgs: MsgsProps[] }) {
@@ -25,7 +25,7 @@ export default function Message({ msgs }: { msgs: MsgsProps[] }) {
               <td>{index + 1}</td>
               <td>{msg.email}</td>
               <td>{msg.message}</td>
-              <td>{msg.createdAt}</td>
+              <td>{msg.createdAt.toDateString()}</td>
             </tr>
           ))}
         </tbody>
