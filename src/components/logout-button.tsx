@@ -6,7 +6,7 @@ import React from "react";
 export default function LogoutButton() {
   return (
     <button
-      onClick={() => signOut({ callbackUrl: "http://localhost:3000/login" })}
+      onClick={() => signOut({ callbackUrl: "/" })}
       className="bg-yellow-500"
     >
       Sign out
