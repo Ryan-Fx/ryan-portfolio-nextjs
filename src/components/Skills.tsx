@@ -2,53 +2,77 @@
 
 import React, { useState } from "react";
 import SkillButton from "./skill-button";
+import { cn } from "@/lib/utils";
+import { Karla, Nanum_Pen_Script } from "next/font/google";
+import { FaGitAlt, FaGithub, FaHtml5 } from "react-icons/fa";
+import {
+  SiMysql,
+  SiNextdotjs,
+  SiPostgresql,
+  SiPrisma,
+  SiTailwindcss,
+} from "react-icons/si";
+import { GrMysql } from "react-icons/gr";
+
+const karla = Karla({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+const nanum = Nanum_Pen_Script({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const skillsData = [
   {
     id: 13,
     name: "HTML",
     tag: ["All", "Front End"],
+    icon: <FaHtml5 className="size-14" />,
   },
   {
     id: 5,
     name: "Tailwind CSS",
     tag: ["All", "Front End"],
+    icon: <SiTailwindcss className="size-14" />,
   },
   {
     id: 4,
     name: "Next JS",
     tag: ["All", "Front End"],
+    icon: <SiNextdotjs className="size-14" />,
   },
 
   {
     id: 6,
     name: "Prisma",
     tag: ["All", "Back End"],
+    icon: <SiPrisma className="size-14" />,
   },
   {
     id: 8,
     name: "PostgreSQL",
     tag: ["All", "Back End"],
+    icon: <SiPostgresql className="size-14" />,
   },
   {
     id: 11,
     name: "MySQL",
     tag: ["All", "Back End"],
+    icon: <GrMysql className="size-14" />,
   },
   {
     id: 9,
     name: "Git",
     tag: ["All", "Tools"],
+    icon: <FaGitAlt className="size-14" />,
   },
   {
     id: 10,
     name: "GitHub",
     tag: ["All", "Tools"],
-  },
-  {
-    id: 12,
-    name: "Framer Motion",
-    tag: ["All", "Front End"],
+    icon: <FaGithub className="size-14" />,
   },
 ];
 
@@ -62,8 +86,16 @@ export default function Skills() {
   const filteredSkills = skillsData.filter((skill) => skill.tag.includes(tag));
 
   return (
-    <section className="scroll-mt-24 md:my-24" id="skills">
-      <h2 className="text-2xl lg:text-5xl font-bold text-gray-500 text-center">
+    <section
+      className="scroll-mt-24 md:my-24 px-8 lg:px-14 xl:px-[220px]"
+      id="skills"
+    >
+      <h2
+        className={cn(
+          "text-2xl md:text-4xl font-bold text-center text-blue-500 dark:text-primary",
+          karla.className
+        )}
+      >
         Skills
       </h2>
       <div className="space-x-8 flex justify-start mb:pt-8 pt-5">
@@ -90,12 +122,16 @@ export default function Skills() {
       </div>
       {filteredSkills.map((skill) => (
         <div key={skill.id} className="inline-flex pt-6 mr-4">
-          <p
+          <div
             key={skill.id}
-            className="bg-fuchsia-500 shadow-md shadow-slate-500/50 text-white py-2 px-6 rounded-full hover:scale-110 hover:bg-pink-400 font-semibold transition animate-bounce"
+            className={cn(
+              "gap-2 px-4 flex flex-col items-center text-xl hover:scale-110 text-purple-500 dark:text-primary hover:text-rose-500 dark:hover:text-purple-500 mt-5 transition animate-bounce",
+              karla.className
+            )}
           >
-            {skill.name}
-          </p>
+            <span>{skill.icon}</span>
+            <span>{skill.name}</span>
+          </div>
         </div>
       ))}
       <div className="mb-16 md:mb-0"></div>

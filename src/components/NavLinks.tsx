@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 const links = [
-  { name: "Home", path: "/" },
+  { name: "Home", path: "#home" },
   { name: "About", path: "#about" },
   { name: "Skills", path: "#skills" },
   { name: "Projects", path: "#projects" },

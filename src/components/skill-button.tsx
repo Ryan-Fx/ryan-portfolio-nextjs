@@ -24,7 +24,7 @@ const SkillButton = ({ name, onClick, isSelected }: Props) => {
       <motion.div
         animate={isSelected ? "active" : "default"}
         variants={variants}
-        className="h-1 lg:h-2 bg-yellow-500 mt-1 rounded-full"
+        className="h-1 lg:h-2 bg-blue-500 mt-1 rounded-full"
       ></motion.div>
     </button>
   );

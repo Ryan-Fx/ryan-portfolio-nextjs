@@ -2,45 +2,51 @@
 
 import Image from "next/image";
 import { useRef, useState, useTransition } from "react";
-import TabButton from "./TabButton";
 import { useScroll, motion, useTransform } from "framer-motion";
+import { Karla } from "next/font/google";
+import { cn } from "@/lib/utils";
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <ul className="list-disc pl-4 text-black dark:text-gray-200">
-        <li>Tailwind CSS</li>
-        <li>Next JS</li>
-        <li>Prisma</li>
-        <li>Laravel</li>
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Education",
-    id: "educations",
-    content: (
-      <ul className="list-disc pl-4 text-black dark:text-gray-200">
-        <li>DIPA University, Makassar</li>
-      </ul>
-    ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
-      <ul className="list-disc pl-4 text-black dark:text-gray-200">
-        <li>Lorem, ipsum.</li>
-        <li>Lorem ipsum dolor sit.</li>
-        <li>Lorem, ipsum dolor.</li>
-      </ul>
-    ),
-  },
-];
+const karla = Karla({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
+
+// const TAB_DATA = [
+//   {
+//     title: "Skills",
+//     id: "skills",
+//     content: (
+//       <ul className="list-disc pl-4 text-black dark:text-gray-200">
+//         <li>Tailwind CSS</li>
+//         <li>Next JS</li>
+//         <li>Prisma</li>
+//         <li>Laravel</li>
+//         <li>PostgreSQL</li>
+//         <li>MySQL</li>
+//       </ul>
+//     ),
+//   },
+//   {
+//     title: "Education",
+//     id: "educations",
+//     content: (
+//       <ul className="list-disc pl-4 text-black dark:text-gray-200">
+//         <li>DIPA University, Makassar</li>
+//       </ul>
+//     ),
+//   },
+//   {
+//     title: "Certifications",
+//     id: "certifications",
+//     content: (
+//       <ul className="list-disc pl-4 text-black dark:text-gray-200">
+//         <li>Lorem, ipsum.</li>
+//         <li>Lorem ipsum dolor sit.</li>
+//         <li>Lorem, ipsum dolor.</li>
+//       </ul>
+//     ),
+//   },
+// ];
 
 export default function About() {
   const [tab, setTab] = useState("skills");
@@ -62,7 +68,7 @@ export default function About() {
 
   return (
     <section
-      className="text-white mb-6 md:mb-12 md:scroll-mt-16 lg:mt-[150px]"
+      className="mb-6 md:mb-12 md:scroll-mt-16 lg:mt-[150px] px-8 lg:px-14 xl:px-[220px]"
       id="about"
     >
       <motion.div
@@ -83,10 +89,20 @@ export default function About() {
             />
           </div>
           <div className="p-2">
-            <h2 className="text-3xl text-gray-600 dark:text-white font-bold mb-2 md:text-5xl lg:text-6xl">
+            <h2
+              className={cn(
+                "text-2xl md:text-4xl font-bold text-blue-500 dark:text-primary",
+                karla.className
+              )}
+            >
               About
             </h2>
-            <p className="text-justify text-gray-600 dark:text-slate-200">
+            <p
+              className={cn(
+                "text-lg text-justify md:text-xl text-muted-foreground tracking-wider",
+                karla.className
+              )}
+            >
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
               quo perspiciatis cum perferendis consectetur incidunt animi est
               esse atque quos recusandae velit officiis sed amet autem rerum,

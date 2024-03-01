@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider } from "@/components/theme-provider.tsx";
 import Provider from "@/components/Provider";
+import Navbar from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,10 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
-      <body
-        className={`${inter.className} bg-gray-50 text-gray-950dark:text-opacity-90 dark:bg-gray-900 dark:text-gray-300`}
-      >
+    <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
+      <body className={`${inter.className} `}>
         <Provider>
           <ThemeProvider
             attribute="class"
@@ -29,12 +28,17 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
+            <Toaster
+              position="bottom-right"
+              toastOptions={{ duration: 3000 }}
+            />
 
-            <div className="bg-[#dbd7fb] dark:bg-[#828093] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
-            <div className=" bg-[#fbe2e3] dark:bg-[#8a7c7c] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] "></div>
-
-            {children}
+            <main className="flex flex-col min-h-screen">
+              <Navbar />
+              {/* <div className="bg-[#dbd7fb] dark:bg-[#8c89a0] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] "></div>
+              <div className=" bg-[#fbe2e3] dark:bg-[#a99899] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] "></div> */}
+              <section>{children}</section>
+            </main>
           </ThemeProvider>
         </Provider>
       </body>

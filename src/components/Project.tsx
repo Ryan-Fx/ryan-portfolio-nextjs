@@ -1,4 +1,11 @@
+import { cn } from "@/lib/utils";
 import ProjectCard from "./ProjectCard";
+import { Karla } from "next/font/google";
+
+const karla = Karla({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
 
 const projectsData = [
   {
@@ -19,51 +26,56 @@ const projectsData = [
     gitUrl: "/",
     previewUrl: "/",
   },
-  {
-    id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+  // {
+  //   id: 3,
+  //   title: "E-commerce Application",
+  //   description: "Project 3 description",
+  //   image: "/images/projects/3.png",
+  //   tag: ["All", "Web"],
+  //   gitUrl: "/",
+  //   previewUrl: "/",
+  // },
+  // {
+  //   id: 4,
+  //   title: "Food Ordering Application",
+  //   description: "Project 4 description",
+  //   image: "/images/projects/4.png",
+  //   tag: ["All", "Mobile"],
+  //   gitUrl: "/",
+  //   previewUrl: "/",
+  // },
+  // {
+  //   id: 5,
+  //   title: "React Firebase Template",
+  //   description: "Authentication and CRUD operations",
+  //   image: "/images/projects/5.png",
+  //   tag: ["All", "Web"],
+  //   gitUrl: "/",
+  //   previewUrl: "/",
+  // },
+  // {
+  //   id: 6,
+  //   title: "Full-stack Roadmap",
+  //   description: "Project 5 description",
+  //   image: "/images/projects/6.png",
+  //   tag: ["All", "Web"],
+  //   gitUrl: "/",
+  //   previewUrl: "/",
+  // },
 ];
 
 export default function Project() {
   return (
-    <section className="scroll-mt-24" id="projects">
-      <h2 className="text-gray-400 dark:text-white text-center font-semibold text-2xl md:text-4xl lg:text-5xl mb-4">
+    <section className="scroll-mt-24 px-8 lg:px-14 xl:px-[220px]" id="projects">
+      <h2
+        className={cn(
+          "text-2xl md:text-4xl font-bold text-center mb-10 text-blue-500 dark:text-primary",
+          karla.className
+        )}
+      >
         My Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-7">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
