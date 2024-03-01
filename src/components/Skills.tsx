@@ -126,7 +126,7 @@ export default function Skills() {
             key={skill.id}
             className={cn(
               "gap-2 px-4 flex flex-col items-center text-xl hover:scale-110 text-purple-500 dark:text-primary hover:text-rose-500 dark:hover:text-purple-500 mt-5 transition animate-bounce",
-              karla.className
+              nanum.className
             )}
           >
             <span>{skill.icon}</span>
