@@ -11,21 +11,22 @@ const projectsData = [
   {
     id: 1,
     title: "React Portfolio Website",
-    description: "Project 1 description",
+    description:
+      "This is just a project cover. 😁 My project is still under development.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
-  {
-    id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
+  // {
+  //   id: 2,
+  //   title: "Potography Portfolio Website",
+  //   description: "Project 2 description",
+  //   image: "/images/projects/2.png",
+  //   tag: ["All", "Web"],
+  //   gitUrl: "/",
+  //   previewUrl: "/",
+  // },
   // {
   //   id: 3,
   //   title: "E-commerce Application",
@@ -35,15 +36,16 @@ const projectsData = [
   //   gitUrl: "/",
   //   previewUrl: "/",
   // },
-  // {
-  //   id: 4,
-  //   title: "Food Ordering Application",
-  //   description: "Project 4 description",
-  //   image: "/images/projects/4.png",
-  //   tag: ["All", "Mobile"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
+  {
+    id: 4,
+    title: "Food Ordering Application",
+    description:
+      "This is just a project cover. 😁 My project is still under development.",
+    image: "/images/projects/4.png",
+    tag: ["All", "Mobile"],
+    gitUrl: "/",
+    previewUrl: "/",
+  },
   // {
   //   id: 5,
   //   title: "React Firebase Template",

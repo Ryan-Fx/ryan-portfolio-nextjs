@@ -68,7 +68,7 @@ export default function ProjectCard({
         <div className="text-black mt-2 w-full flex justify-between md:flex-none">
           <div>
             <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
-            <p className="text-gray-400 dark:text-slate-300">{description}</p>
+            <p className="text-muted-foreground">{description}</p>
           </div>
           <div className="md:hidden flex gap-4 p-2">
             <Link

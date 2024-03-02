@@ -74,13 +74,16 @@ export default function Hero() {
             </span>
           </p>
           <div className="flex items-center justify-center md:justify-start space-x-4">
-            <Link href="https://github.com/" target="_blank">
+            <Link href="https://github.com/Ryan-Fx" target="_blank">
               <FaGithub className="h-8 w-8 hover:scale-110 transition-all hover:text-purple-500" />
             </Link>
-            <Link href="https://www.linkedin.com/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/in/ryan-fx-5921872b8"
+              target="_blank"
+            >
               <FaLinkedin className="h-8 w-8 hover:scale-110 transition-all hover:text-purple-500" />
             </Link>
-            <Link href="https://www.instagram.com/" target="_blank">
+            <Link href="https://instagram.com/fx.ryan" target="_blank">
               <FaInstagram className="h-8 w-8 hover:scale-110 transition-all hover:text-purple-500" />
             </Link>
           </div>

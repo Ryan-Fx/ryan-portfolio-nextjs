@@ -102,7 +102,7 @@ export default function Contact() {
           network, or would like to chat about any projects I can help with.
         </p>
         <div className="flex space-x-2 md:space-x-5 justify-end md:justify-start">
-          <Link href="">
+          <Link href="https://www.linkedin.com/in/ryan-fx-5921872b8">
             <FaLinkedin className="h-8 w-8 hover:scale-110 transition-all hover:text-purple-500" />
           </Link>
           <Link href="https://github.com/Ryan-Fx" target="_blank">
