@@ -130,7 +130,7 @@ export default function Contact() {
                   <FormControl>
                     <Input
                       className="ring-2 ring-cyan-500"
-                      placeholder="Jhon Doe"
+                      placeholder="Ryan"
                       {...field}
                     />
                   </FormControl>
