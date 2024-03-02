@@ -78,7 +78,7 @@ export default function Contact() {
 
   return (
     <section
-      className="grid md:grid-cols-7 md:gap-2 xl:gap-6 mt-10 md:mt-28 scroll-mt-20 space-y-4 md:space-y-0 bg-teal-50 dark:bg-primary-foreground px-8 lg:px-14 xl:px-[220px] py-[120px]"
+      className="grid md:grid-cols-7 md:gap-2 xl:gap-6 mt-10 md:mt-28 scroll-mt-12 space-y-4 md:space-y-0 bg-teal-50 dark:bg-primary-foreground px-8 lg:px-14 xl:px-[220px] py-[120px]"
       id="contact"
     >
       <div className="space-y-4 col-span-3">

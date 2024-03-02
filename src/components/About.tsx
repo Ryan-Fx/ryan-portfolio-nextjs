@@ -68,7 +68,7 @@ export default function About() {
 
   return (
     <section
-      className="mb-6 md:mb-12 md:scroll-mt-16 lg:mt-[150px] px-8 lg:px-14 xl:px-[220px]"
+      className="mb-6 md:mb-12 md:scroll-mt-24 lg:mt-[150px] px-8 lg:px-14 xl:px-[220px]"
       id="about"
     >
       <motion.div
@@ -78,94 +78,41 @@ export default function About() {
         ref={ref}
         style={{ scale: scaleProgress, opacity: opacityProgress }}
       >
-        <div className="space-y-4 md:space-y-0 py-8 md:grid md:grid-cols-2">
-          <div className="p-2 lg:px-4">
+        <h2
+          className={cn(
+            "text-2xl text-center md:text-4xl font-bold text-blue-500 dark:text-primary",
+            karla.className
+          )}
+        >
+          About
+        </h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="">
             <Image
-              className="rounded-lg mx-auto w-full"
+              className="rounded-lg mx-auto size-[400px]"
               src={"/images/about.png"}
               width={500}
               height={500}
               alt={"about image"}
             />
           </div>
-          <div className="p-2">
-            <h2
-              className={cn(
-                "text-2xl md:text-4xl font-bold text-blue-500 dark:text-primary",
-                karla.className
-              )}
-            >
-              About
-            </h2>
+          <div className="flex items-center p-2">
             <p
               className={cn(
-                "text-lg text-justify md:text-xl text-muted-foreground tracking-wider",
+                "text-lg md:text-xl text-muted-foreground tracking-wider",
                 karla.className
               )}
             >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-              quo perspiciatis cum perferendis consectetur incidunt animi est
-              esse atque quos recusandae velit officiis sed amet autem rerum,
-              nesciunt, quaerat repudiandae qui minus culpa a aspernatur tempore
-              possimus. Error qui eveniet illum assumenda vero dolores eius ad
-              omnis, dicta, asperiores maiores.
+              I am a Web Developer(Junior Developer for now) and longlife
+              learner. I am passionate and love to learn new things for the web.
+              I enjoy development because of the satisfaction i get by
+              overcoming challenges. i am motivated by the opportunity that
+              software provides to positively impact the life of an individual,
+              and the world as a whole.
             </p>
-            {/* <div className="hidden lg:flex flex-col mt-5">
-              <div className="md:flex justify-between text-2xl w-[300px] ">
-                <TabButton
-                  selectTab={() => handleTabChange("skills")}
-                  active={tab === "skills"}
-                >
-                  Skills
-                </TabButton>
-                <TabButton
-                  selectTab={() => handleTabChange("educations")}
-                  active={tab === "educations"}
-                >
-                  Educations
-                </TabButton>
-                <TabButton
-                  selectTab={() => handleTabChange("certifications")}
-                  active={tab === "certifications"}
-                >
-                  Certifications
-                </TabButton>
-              </div>
-              <div className="mt-2 h-[150px]">
-                <div className="h-full">
-                  {TAB_DATA.find((t) => t.id === tab)?.content}
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
-        {/* <div className="flex flex-col px-2 md:px-0 lg:hidden">
-          <div className="md:flex justify-between w-[300px] md:px-3 md:text-xl text-lg">
-            <TabButton
-              selectTab={() => handleTabChange("skills")}
-              active={tab === "skills"}
-            >
-              Skills
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("educations")}
-              active={tab === "educations"}
-            >
-              Educations
-            </TabButton>
-            <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
-            >
-              Certifications
-            </TabButton>
-          </div>
-          <div className="mt-2 h-[150px] md:px-3">
-            <div className="h-full">
-              {TAB_DATA.find((t) => t.id === tab)?.content}
-            </div>
-          </div>
-        </div> */}
       </motion.div>
     </section>
   );
