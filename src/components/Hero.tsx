@@ -90,8 +90,8 @@ export default function Hero() {
             transition={{ delay: 0.5 }}
             className="space-y-3 sm:space-x-3"
           >
-            <Button className="hover:scale-110 transition rounded-full">
-              Contact Me
+            <Button className="hover:scale-110 transition rounded-full" asChild>
+              <Link href={"#contact"}>Contact Me</Link>
             </Button>
 
             <Button

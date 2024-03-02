@@ -29,7 +29,7 @@ export default function Navbar() {
             </div>
           </div>
           {/* dark mode */}
-          <div className="hidden md:flex px-4">
+          <div className="hidden md:flex pr-8">
             <ThemeSwitch />
           </div>
         </div>

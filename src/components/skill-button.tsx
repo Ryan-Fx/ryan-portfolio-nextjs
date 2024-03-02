@@ -17,14 +17,14 @@ const SkillButton = ({ name, onClick, isSelected }: Props) => {
 
   return (
     <button
-      className={`${buttonStyles} text-base md:text-lg font-semibold lg:text-2xl xl:text-3xl cursor-pointer hover:text-gray-600 transition duration-300`}
+      className={`${buttonStyles} text-base md:text-lg font-semibold lg:text-xl cursor-pointer hover:text-gray-600 transition duration-300`}
       onClick={() => onClick(name)}
     >
       {name}
       <motion.div
         animate={isSelected ? "active" : "default"}
         variants={variants}
-        className="h-1 lg:h-2 bg-blue-500 mt-1 rounded-full"
+        className="h-1 lg:h-2 bg-purple-500 mt-1 rounded-full"
       ></motion.div>
     </button>
   );

@@ -29,50 +29,50 @@ const skillsData = [
     id: 13,
     name: "HTML",
     tag: ["All", "Front End"],
-    icon: <FaHtml5 className="size-14" />,
+    icon: <FaHtml5 className="size-12" />,
   },
   {
     id: 5,
     name: "Tailwind CSS",
     tag: ["All", "Front End"],
-    icon: <SiTailwindcss className="size-14" />,
+    icon: <SiTailwindcss className="size-12" />,
   },
   {
     id: 4,
     name: "Next JS",
     tag: ["All", "Front End"],
-    icon: <SiNextdotjs className="size-14" />,
+    icon: <SiNextdotjs className="size-12" />,
   },
 
   {
     id: 6,
     name: "Prisma",
     tag: ["All", "Back End"],
-    icon: <SiPrisma className="size-14" />,
+    icon: <SiPrisma className="size-12" />,
   },
   {
     id: 8,
     name: "PostgreSQL",
     tag: ["All", "Back End"],
-    icon: <SiPostgresql className="size-14" />,
+    icon: <SiPostgresql className="size-12" />,
   },
   {
     id: 11,
     name: "MySQL",
     tag: ["All", "Back End"],
-    icon: <GrMysql className="size-14" />,
+    icon: <GrMysql className="size-12" />,
   },
   {
     id: 9,
     name: "Git",
     tag: ["All", "Tools"],
-    icon: <FaGitAlt className="size-14" />,
+    icon: <FaGitAlt className="size-12" />,
   },
   {
     id: 10,
     name: "GitHub",
     tag: ["All", "Tools"],
-    icon: <FaGithub className="size-14" />,
+    icon: <FaGithub className="size-12" />,
   },
 ];
 
@@ -125,7 +125,7 @@ export default function Skills() {
           <div
             key={skill.id}
             className={cn(
-              "gap-2 px-4 flex flex-col items-center text-xl hover:scale-110 text-purple-500 dark:text-primary hover:text-rose-500 dark:hover:text-purple-500 mt-5 transition animate-bounce",
+              "gap-2 px-4 flex flex-col items-center text-2xl hover:scale-110 text-purple-500 dark:text-primary hover:text-rose-500 dark:hover:text-purple-500 mt-5 transition animate-bounce",
               nanum.className
             )}
           >
