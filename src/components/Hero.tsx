@@ -105,10 +105,11 @@ export default function Hero() {
         <div className="col-span-5 place-self-center group">
           <div className="rounded-full group-hover:scale-110 group-hover:-rotate-12 transition duration-700 bg-gradient-to-r from-fuchsia-400 to-pink-300 dark:bg-gradient-to-r dark:from-fuchsia-900 dark:to-pink-900 w-[250px] h-[250px] lg:w-[400px] lg:h-[400px]">
             <Image
-              src={"/images/hero.png"}
+              src={"/images/logo.png"}
               width={500}
               height={500}
               alt={"Hero"}
+              className="rounded-full"
             />
           </div>
         </div>
