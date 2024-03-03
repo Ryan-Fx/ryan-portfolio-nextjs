@@ -8,7 +8,7 @@ import Skills from "@/components/Skills";
 export default function Home() {
   return (
     <div>
-      <div className="mx-auto mt-16">
+      <div className="mx-auto mt-20">
         <Hero />
         <About />
         <Skills />
