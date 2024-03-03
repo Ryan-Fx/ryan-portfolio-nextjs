@@ -98,7 +98,7 @@ export default function Skills() {
       >
         Skills
       </h2>
-      <div className="space-x-8 flex justify-start mb:pt-8 pt-5">
+      <div className="space-x-8 flex justify-center px-4 mb:pt-8 pt-5">
         <SkillButton
           onClick={handleTagChange}
           name="All"
@@ -125,7 +125,7 @@ export default function Skills() {
           <div
             key={skill.id}
             className={cn(
-              "gap-2 px-4 flex flex-col items-center text-2xl hover:scale-110 text-purple-500 dark:text-primary hover:text-rose-500 dark:hover:text-purple-500 mt-5 transition animate-bounce",
+              "text-2xl px-4 hover:scale-110 text-purple-500 dark:text-primary hover:text-rose-500 dark:hover:text-purple-500 mt-5 transition animate-bounce",
               nanum.className
             )}
           >

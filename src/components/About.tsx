@@ -3,12 +3,17 @@
 import Image from "next/image";
 import { useRef, useState, useTransition } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
-import { Karla } from "next/font/google";
+import { Karla, Nanum_Pen_Script } from "next/font/google";
 import { cn } from "@/lib/utils";
 
 const karla = Karla({
   subsets: ["latin"],
   weight: ["400", "600"],
+});
+
+const nanum = Nanum_Pen_Script({
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 // const TAB_DATA = [
@@ -104,12 +109,16 @@ export default function About() {
                 karla.className
               )}
             >
-              I am a Web Developer(Junior Developer for now) and longlife
-              learner. I am passionate and love to learn new things for the web.
-              I enjoy development because of the satisfaction i get by
-              overcoming challenges. i am motivated by the opportunity that
-              software provides to positively impact the life of an individual,
-              and the world as a whole.
+              I'm a developer{" "}
+              <span className={cn("text-rose-400 text-xl", nanum.className)}>
+                (Junior developer for now)
+              </span>{" "}
+              and longlife learner.😁 I am passionate and love to learn new
+              things for the web.{" "}
+              <span className="text-rose-400">I enjoy development</span> because
+              of the satisfaction i get by overcoming challenges. i am motivated
+              by the opportunity that software provides to positively impact the
+              life of an individual, and the world as a whole.
             </p>
           </div>
         </div>
