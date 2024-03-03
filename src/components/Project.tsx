@@ -77,7 +77,7 @@ export default function Project() {
       >
         My Projects
       </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:gap-9">
+      <div className="grid grid-cols-1 md:grid-cols-2 space-y-6 md:space-y-0 md:gap-9">
         {projectsData.map((project) => (
           <ProjectCard
             key={project.id}
