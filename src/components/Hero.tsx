@@ -91,7 +91,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="space-y-3 sm:space-x-3"
+            className="space-y-3 space-x-2 sm:space-x-3"
           >
             <Button className="hover:scale-110 transition rounded-full" asChild>
               <Link href={"#contact"}>Contact Me</Link>
