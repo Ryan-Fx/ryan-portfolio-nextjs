@@ -7,13 +7,16 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import { ThemeSwitch } from "./theme-switch";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { useSession } from "next-auth/react";
 
 export default function Navbar() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
 
   const pathname = usePathname();
+  const { data: session } = useSession();
 
-  if (pathname === "/login") return null;
+  if (pathname === "/login" || pathname === "/minee") return null;
 
   return (
     <nav className="sticky top-0 z-10">
@@ -37,6 +40,16 @@ export default function Navbar() {
             <ThemeSwitch />
           </div>
         </div>
+
+        {/* mail icon */}
+        {session?.user.role === "ADMIN" && (
+          <div className="absolute right-24 top-8">
+            <div></div>
+            <Link href={"/minee"} className="text-3xl">
+              📩
+            </Link>
+          </div>
+        )}
 
         {/* mobile-menu */}
         <div className="md:hidden flex flex-col w-full absolute top-0">

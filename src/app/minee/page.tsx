@@ -5,6 +5,14 @@ import { getServerSession } from "next-auth";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { prisma } from "@/lib/prisma";
+import { Button } from "@/components/ui/button";
+import { Poppins } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
 
 async function getData() {
   const res = await prisma.minee.findMany();
@@ -19,19 +27,27 @@ export default async function MineePage() {
   }
 
   const msgs = await getData();
-  console.log(msgs);
 
   return (
-    <div className="p-4 space-y-4">
-      <p>Minee Page</p>
-      <div>
-        <Link href={"/"}>Home</Link>
-      </div>
-      <div>
-        <Message msgs={msgs} />
-      </div>
-      <div>
-        <LogoutButton />
+    <div className=" max-w-screen-lg mx-auto p-6">
+      <p
+        className={cn(
+          "text-center font-semibold text-2xl mb-10",
+          poppins.className
+        )}
+      >
+        My Messages!
+      </p>
+      <div className="space-y-4">
+        <div className="flex justify-between space-x-2">
+          <Button asChild>
+            <Link href={"/"}>Home</Link>
+          </Button>
+          <LogoutButton />
+        </div>
+        <div>
+          <Message msgs={msgs} />
+        </div>
       </div>
     </div>
   );

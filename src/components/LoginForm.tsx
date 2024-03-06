@@ -6,12 +6,12 @@ import { Button } from "./ui/button";
 import { FcGoogle } from "react-icons/fc";
 
 export default function LoginForm() {
-  const google = () => signIn("google", { callbackUrl: "/minee" });
+  const google = () => signIn("google", { callbackUrl: "/" });
 
   return (
     <div className="w-[400px] rounded-lg p-10 bg-primary-foreground shadow-xl shadow-black/50 space-y-3">
       <div className="mt-2 ">
-        <Button onClick={google} className="w-full">
+        <Button variant={"outline"} onClick={google} className="w-full">
           <FcGoogle size={20} className="mr-2" />
           Login with Google
         </Button>
