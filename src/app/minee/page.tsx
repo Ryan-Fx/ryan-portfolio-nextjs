@@ -12,18 +12,14 @@ async function getData() {
 }
 
 export default async function MineePage() {
-  // const { status } = useSession();
-  // if (status === "unauthenticated") {
-  //   redirect("/login");
-  // }
+  const session = await getServerSession(authOptions);
+
+  if (session?.user.role !== "ADMIN") {
+    redirect("/");
+  }
 
   const msgs = await getData();
   console.log(msgs);
-
-  const session = await getServerSession(authOptions);
-  if (!session) {
-    redirect("/");
-  }
 
   return (
     <div className="p-4 space-y-4">

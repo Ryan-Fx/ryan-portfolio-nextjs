@@ -2,17 +2,26 @@
 
 import { signIn } from "next-auth/react";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { FcGoogle } from "react-icons/fc";
 
 export default function LoginForm() {
   const google = () => signIn("google", { callbackUrl: "/minee" });
 
   return (
-    <div className="w-[400px] rounded-lg p-10 shadow-xl shadow-black/50 space-y-3">
-      <div className="mt-2 bg-blue-500">
-        <button onClick={google}>Login with Google</button>
+    <div className="w-[400px] rounded-lg p-10 bg-primary-foreground shadow-xl shadow-black/50 space-y-3">
+      <div className="mt-2 ">
+        <Button onClick={google} className="w-full">
+          <FcGoogle size={20} className="mr-2" />
+          Login with Google
+        </Button>
       </div>
       <div>
-        <Link href={"/"}>Home</Link>
+        <Button asChild>
+          <Link href={"/"} className="w-full">
+            Back To Home
+          </Link>
+        </Button>
       </div>
     </div>
   );

@@ -6,10 +6,14 @@ import { Bars4Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
 import clsx from "clsx";
 import { ThemeSwitch } from "./theme-switch";
-import { Button } from "./ui/button";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [navbarIsOpen, setNavbarIsOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  if (pathname === "/login") return null;
 
   return (
     <nav className="sticky top-0 z-10">

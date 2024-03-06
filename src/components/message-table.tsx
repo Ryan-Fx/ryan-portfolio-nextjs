@@ -1,5 +1,3 @@
-import React from "react";
-
 interface MsgsProps {
   id: string;
   email: string;

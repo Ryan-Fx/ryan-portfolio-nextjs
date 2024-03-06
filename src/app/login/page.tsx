@@ -8,7 +8,7 @@ export default async function LoginPage() {
   if (session) redirect("/");
 
   return (
-    <div className="flex justify-center items-center w-full h-screen">
+    <div className="flex justify-center items-center w-full h-screen bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
       <LoginForm />
     </div>
   );
