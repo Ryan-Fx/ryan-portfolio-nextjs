@@ -109,12 +109,12 @@ export default function About() {
                 karla.className
               )}
             >
-              I'm a developer{" "}
+              A passionate web developer{" "}
               <span className={cn("text-rose-400 text-xl", nanum.className)}>
                 (Junior developer for now)
-              </span>{" "}
-              and longlife learner.😁 I am passionate and love to learn new
-              things for the web.{" "}
+              </span>
+              , love to learn new things for the web. Try to enhance user
+              interface to make better user experience.{" "}
               <span className="text-rose-400">I enjoy development</span> because
               of the satisfaction i get by overcoming challenges. i am motivated
               by the opportunity that software provides to positively impact the

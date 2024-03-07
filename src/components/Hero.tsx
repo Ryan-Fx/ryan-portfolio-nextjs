@@ -65,7 +65,7 @@ export default function Hero() {
             )}
           >
             A web developer with a passion for creating engaging, entertaining
-            user experiences.
+            user experiences and responsive web design.
             <br />
             <span className="hidden lg:block">
               You can find me on

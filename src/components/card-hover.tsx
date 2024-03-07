@@ -36,7 +36,7 @@ export function HoverCardDemo() {
             </div>
             <div className="flex items-center pt-2">
               <FaWhatsapp className="mr-2 h-4 w-4 opacity-70 text-teal-500  hover:text-purple-500" />{" "}
-              <span className="text-muted-foreground text-teal-500">
+              <span className="text-muted-foreground text-teal-500 hover:text-purple-400">
                 +628 525 631 1650
               </span>
             </div>
