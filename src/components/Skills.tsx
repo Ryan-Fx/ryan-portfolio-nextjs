@@ -11,6 +11,7 @@ import {
   SiPostgresql,
   SiPrisma,
   SiTailwindcss,
+  SiTypescript,
 } from "react-icons/si";
 import { GrMysql } from "react-icons/gr";
 
@@ -36,6 +37,12 @@ const skillsData = [
     name: "Tailwind CSS",
     tag: ["All", "Front End"],
     icon: <SiTailwindcss className="size-12" />,
+  },
+  {
+    id: 3,
+    name: "Typescript",
+    tag: ["All", "Front End"],
+    icon: <SiTypescript className="size-12" />,
   },
   {
     id: 4,
