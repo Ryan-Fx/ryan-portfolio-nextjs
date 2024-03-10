@@ -12,7 +12,7 @@ const projectsData = [
     id: 1,
     title: "React Portfolio Website",
     description:
-      "This is just a project cover. 😁 My project is still under development.",
+      "This is just a project cover. 😁 My real project is still in progress.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "/",
@@ -40,7 +40,7 @@ const projectsData = [
     id: 4,
     title: "Food Ordering Application",
     description:
-      "This is just a project cover. 😁 My project is still under development.",
+      "This is just a project cover. 😁 My real project is still in progress.",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "/",
