@@ -106,6 +106,7 @@ export default function Hero() {
                 href={
                   "https://docs.google.com/document/d/16IBKBDKwbmZY76pvDuqxJxskaTzdoeY5YHRjw9vxEaQ/edit?usp=sharing"
                 }
+                target="_blank"
               >
                 Download CV
               </Link>
