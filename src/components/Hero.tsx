@@ -98,10 +98,17 @@ export default function Hero() {
             </Button>
 
             <Button
+              asChild
               variant="outline"
               className="hover:scale-110 transition rounded-full shadow-lg"
             >
-              Download CV
+              <Link
+                href={
+                  "https://docs.google.com/document/d/16IBKBDKwbmZY76pvDuqxJxskaTzdoeY5YHRjw9vxEaQ/edit?usp=sharing"
+                }
+              >
+                Download CV
+              </Link>
             </Button>
           </motion.div>
         </div>
