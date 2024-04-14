@@ -9,7 +9,15 @@ import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Karla, Poppins } from "next/font/google";
 import Link from "next/link";
-import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaArrowAltCircleDown,
+  FaArrowRight,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaRegArrowAltCircleRight,
+} from "react-icons/fa";
+import { IoDownloadOutline } from "react-icons/io5";
 
 const karla = Karla({
   subsets: ["latin"],
@@ -94,7 +102,9 @@ export default function Hero() {
             className="space-y-3 space-x-2 sm:space-x-3"
           >
             <Button className="hover:scale-110 transition rounded-full" asChild>
-              <Link href={"#contact"}>Contact Me</Link>
+              <Link href={"#contact"}>
+                Contact Me <FaArrowRight size={16} className="ml-2" />
+              </Link>
             </Button>
 
             <Button
@@ -109,6 +119,7 @@ export default function Hero() {
                 target="_blank"
               >
                 Download CV
+                <IoDownloadOutline size={20} className="ml-2" />
               </Link>
             </Button>
           </motion.div>
