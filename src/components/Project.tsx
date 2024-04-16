@@ -10,23 +10,23 @@ const karla = Karla({
 const projectsData = [
   {
     id: 1,
-    title: "Personal Portfolio Website",
-    description:
-      "This full-stack application was built and developed using Next JS, Tailwind CSS, Prisma and PostgreSQL. This portfolio uses responsive design so that its appearance will adjust to the user's screen size.",
-    image: "/images/projects/portfolio.jpg",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
-  },
-  {
-    id: 2,
     title: "Ecommerce Website (Ryan Store)",
     description:
       "This full-stack application was built and developed using Next JS, Tailwind CSS, Prisma and PostgreSQL.",
     image: "/images/projects/store.jpg",
     tag: ["All", "Mobile"],
     gitUrl: "/",
-    previewUrl: "/",
+    previewUrl: "https://ryannn-store.vercel.app",
+  },
+  {
+    id: 2,
+    title: "Personal Portfolio Website",
+    description:
+      "This full-stack application was built and developed using Next JS, Tailwind CSS, Prisma and PostgreSQL. This portfolio uses responsive design so that its appearance will adjust to the user's screen size.",
+    image: "/images/projects/portfolio.jpg",
+    tag: ["All", "Web"],
+    gitUrl: "/",
+    previewUrl: "https://ryann-devv.vercel.app",
   },
 ];
 
@@ -48,6 +48,7 @@ export default function Project() {
             title={project.title}
             description={project.description}
             imgUrl={project.image}
+            previewUrl={project.previewUrl}
             tags={project.tag}
           />
         ))}
