@@ -10,60 +10,24 @@ const karla = Karla({
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
+    title: "Personal Portfolio Website",
     description:
-      "This is just a project cover. 😁 My real project is still in progress.",
-    image: "/images/projects/1.png",
+      "This full-stack application was built and developed using Next JS, Tailwind CSS, Prisma and PostgreSQL. This portfolio uses responsive design so that its appearance will adjust to the user's screen size.",
+    image: "/images/projects/portfolio.jpg",
     tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
-  // {
-  //   id: 2,
-  //   title: "Potography Portfolio Website",
-  //   description: "Project 2 description",
-  //   image: "/images/projects/2.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 3,
-  //   title: "E-commerce Application",
-  //   description: "Project 3 description",
-  //   image: "/images/projects/3.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
   {
-    id: 4,
-    title: "Food Ordering Application",
+    id: 2,
+    title: "Ecommerce Website (Ryan Store)",
     description:
-      "This is just a project cover. 😁 My real project is still in progress.",
-    image: "/images/projects/4.png",
+      "This full-stack application was built and developed using Next JS, Tailwind CSS, Prisma and PostgreSQL.",
+    image: "/images/projects/store.jpg",
     tag: ["All", "Mobile"],
     gitUrl: "/",
     previewUrl: "/",
   },
-  // {
-  //   id: 5,
-  //   title: "React Firebase Template",
-  //   description: "Authentication and CRUD operations",
-  //   image: "/images/projects/5.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Full-stack Roadmap",
-  //   description: "Project 5 description",
-  //   image: "/images/projects/6.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
 ];
 
 export default function Project() {

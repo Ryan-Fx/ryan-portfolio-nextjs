@@ -1,10 +1,17 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { CodeBracketIcon, EyeIcon } from "@heroicons/react/24/outline";
 import { useScroll, motion, useTransform } from "framer-motion";
+import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "800"],
+});
 
 export default function ProjectCard({
   imgUrl,
@@ -30,7 +37,7 @@ export default function ProjectCard({
       <motion.div
         ref={ref}
         style={{ scale: scaleProgress, opacity: opacityProgress }}
-        className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group shadow-lg shadow-slate-500/60 dark:shadow-slate-500/30 p-2 dark:bg-gray-700"
+        className="relative rounded-lg overflow-hidden flex flex-col items-center justify-center group shadow-lg shadow-slate-500/60 dark:shadow-slate-500/30 p-2 dark:bg-gray-700 bg-teal-100"
       >
         <div className="flex items-center rounded-lg justify-center relative overflow-hidden">
           {/* image */}
@@ -66,9 +73,16 @@ export default function ProjectCard({
           </div>
         </div>
         <div className="text-black mt-2 w-full flex justify-between md:flex-none">
-          <div>
+          <div className="space-y-1">
             <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
-            <p className="text-muted-foreground">{description}</p>
+            <p
+              className={cn(
+                "text-muted-foreground h-[70px] text-sm",
+                poppins.className
+              )}
+            >
+              {description}
+            </p>
           </div>
           <div className="md:hidden flex gap-4 p-2">
             <Link
