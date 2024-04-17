@@ -15,12 +15,14 @@ const poppins = Poppins({
 
 export default function ProjectCard({
   imgUrl,
+  gitUrl,
   previewUrl,
   title,
   description,
   tags,
 }: {
   imgUrl: string;
+  gitUrl: string;
   previewUrl: string;
   title: string;
   description: string;
@@ -58,7 +60,8 @@ export default function ProjectCard({
           <div className="absolute bottom-0 translate-y-full group-hover:md:-translate-y-16 group-hover:lg:-translate-y-[90px] group-hover:xl:-translate-y-20 transition-all duration-300 text-white flex space-x-2">
             <div className="rounded-full border-2 p-2 group/ryan cursor-pointer  border-gray-400 hover:border-white hover/ryan">
               <Link
-                href={"#"}
+                href={gitUrl}
+                target="_blank"
                 className="h-14 w-14 border-gray-400 hover/ryan:border-white rounded-full "
               >
                 <CodeBracketIcon className="h-10 w-10 text-gray-400 group-hover/ryan:text-white " />

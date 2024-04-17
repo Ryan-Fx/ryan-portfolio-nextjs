@@ -15,7 +15,7 @@ const projectsData = [
       "This full-stack application was built and developed using Next JS, Tailwind CSS, Prisma and PostgreSQL.",
     image: "/images/projects/store.jpg",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Ryan-Fx/ryan-e-commerce",
     previewUrl: "https://ryannn-store.vercel.app",
   },
   {
@@ -25,7 +25,7 @@ const projectsData = [
       "This full-stack application was built and developed using Next JS, Tailwind CSS, Prisma and PostgreSQL. This portfolio uses responsive design so that its appearance will adjust to the user's screen size.",
     image: "/images/projects/portfolio.jpg",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/Ryan-Fx/ryan-portfolio-nextjs",
     previewUrl: "https://ryann-devv.vercel.app",
   },
 ];
@@ -48,6 +48,7 @@ export default function Project() {
             title={project.title}
             description={project.description}
             imgUrl={project.image}
+            gitUrl={project.gitUrl}
             previewUrl={project.previewUrl}
             tags={project.tag}
           />

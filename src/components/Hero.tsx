@@ -32,7 +32,7 @@ const poppins = Poppins({
 export default function Hero() {
   return (
     <section
-      className="scroll-mt-[100rem] px-8 lg:px-14 xl:px-[220px]"
+      className="scroll-mt-[100rem] px-8 lg:px-14 xl:px-[120px]"
       id="home"
     >
       <motion.div
@@ -44,7 +44,7 @@ export default function Hero() {
         <div className="col-span-7 place-self-center space-y-4 mb-6 md:mb-0 text-center md:text-left">
           <h1
             className={cn(
-              "text-fuchsia-500 text-2xl md:text-4xl lg:text-5xl font-extrabold"
+              "text-fuchsia-500 text-2xl md:text-3xl lg:text-4xl font-extrabold"
             )}
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500">
@@ -53,7 +53,7 @@ export default function Hero() {
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                "Ryan",
+                "Rahmat, you can call me Ryan😁",
                 1000, // wait 1s before replacing "Mice" with "Hamsters"
                 "Web Developer",
                 1000,
