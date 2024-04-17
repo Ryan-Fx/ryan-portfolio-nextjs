@@ -83,7 +83,7 @@ export default function ProjectCard({
             <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
             <p
               className={cn(
-                "text-muted-foreground h-[70px] text-sm",
+                "text-muted-foreground h-[80px] text-sm",
                 poppins.className
               )}
             >
