@@ -7,7 +7,9 @@ import { Poppins } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-
+import { Button } from "./ui/button";
+import { FaCode } from "react-icons/fa6";
+import { IoMdEye } from "react-icons/io";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "800"],
@@ -83,28 +85,38 @@ export default function ProjectCard({
             <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
             <p
               className={cn(
-                "text-muted-foreground h-[80px] text-sm",
+                "text-muted-foreground h-[90px] text-sm",
                 poppins.className
               )}
             >
               {description}
             </p>
           </div>
-          <div className="md:hidden flex gap-4 p-2">
-            <Link
-              href={"#"}
-              className="flex justify-center items-center relative"
+        </div>
+
+        {/* mobile link */}
+        <div className="md:hidden flex justify-end w-full p-1">
+          <div>
+            <Button
+              variant={"outline"}
+              size={"icon"}
+              className="rounded-full mr-2"
+              asChild
             >
-              <span className="h-10 w-10 absolute rounded-full border border-slate-300 -z-10 bg-slate-800" />
-              <CodeBracketIcon className="h-7 w-7 text-gray-300 hover:text-white" />
-            </Link>
-            <Link
-              href={"#"}
-              className="flex justify-center items-center relative"
+              <Link href={gitUrl} target="_blank">
+                <FaCode size={20} />
+              </Link>
+            </Button>
+            <Button
+              variant={"outline"}
+              size={"icon"}
+              className="rounded-full"
+              asChild
             >
-              <span className="h-10 w-10 absolute rounded-full border border-slate-300  -z-10 bg-slate-800" />
-              <EyeIcon className="h-7 w-7 text-gray-300 hover:text-white" />
-            </Link>
+              <Link href={previewUrl} target="_blank">
+                <IoMdEye size={20} />
+              </Link>
+            </Button>
           </div>
         </div>
       </motion.div>
