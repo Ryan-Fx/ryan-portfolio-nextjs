@@ -10,6 +10,7 @@ import { useRef } from "react";
 import { Button } from "./ui/button";
 import { FaCode } from "react-icons/fa6";
 import { IoMdEye } from "react-icons/io";
+import { ScrollArea } from "./ui/scroll-area";
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "800"],
@@ -83,14 +84,14 @@ export default function ProjectCard({
         <div className="text-black mt-2 w-full flex justify-between md:flex-none">
           <div className="space-y-1">
             <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
-            <p
+            <ScrollArea
               className={cn(
                 "text-muted-foreground h-[90px] text-sm",
                 poppins.className
               )}
             >
               {description}
-            </p>
+            </ScrollArea>
           </div>
         </div>
 
