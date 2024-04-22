@@ -84,14 +84,14 @@ export default function ProjectCard({
         <div className="text-black mt-2 w-full flex justify-between md:flex-none">
           <div className="space-y-1">
             <h5 className="text-xl font-semibold dark:text-white">{title}</h5>
-            <ScrollArea
+            <p
               className={cn(
-                "text-muted-foreground h-[90px] text-sm",
+                "text-muted-foreground h-[110px] md:h-[90] text-sm",
                 poppins.className
               )}
             >
               {description}
-            </ScrollArea>
+            </p>
           </div>
         </div>
 
